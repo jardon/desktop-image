@@ -71,6 +71,7 @@ stages:
       - modules/160-utilities.yml
       - modules/170-gnome-software-vso-plugin.yml
       - modules/200-gnome-common.yml
+      - modules/209-nvidia-555.yml
       - modules/210-libs-extra.yml
       - modules/211-abroot-fstab-mount.yml
       - modules/998-vanilla-cleanup.yml
