@@ -3,6 +3,7 @@ name: Differ
 on:
   workflow_run:
     workflows: [Vib Build]
+    branches: [main]
     types:
       - completed
 
