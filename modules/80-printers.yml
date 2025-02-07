@@ -15,3 +15,19 @@ source:
   # Config
   - system-config-printer-common
   - system-config-printer-udev
+modules:
+- name: hplip
+  type: shell
+  commands:
+  - mkdir -p /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/hpijs-ppds_3.22.10+dfsg0-6_all.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/hplip-data_3.22.10+dfsg0-6_all.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/hplip-dbgsym_3.22.10+dfsg0-6_amd64.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/hplip-doc_3.22.10+dfsg0-6_all.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/hplip-gui_3.22.10+dfsg0-6_all.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/hplip_3.22.10+dfsg0-6_amd64.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/libhpmud-dev_3.22.10+dfsg0-6_amd64.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/libhpmud0-dbgsym_3.22.10+dfsg0-6_amd64.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/libhpmud0_3.22.10+dfsg0-6_amd64.deb -P /tmp/hplip
+  - wget https://github.com/Vanilla-OS/hplip.v2/releases/download/3.22.10%2Bdfsg0-6/libsane-hpaio-dbgsym_3.22.10+dfsg0-6_amd64.deb -P /tmp/hplip
+  - dpkg -i /tmp/hplip/*.deb
